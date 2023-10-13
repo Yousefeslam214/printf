@@ -9,6 +9,7 @@ int _printf_char(va_list args)
     putchar(va_arg(args, int));
     return(1);
 }
+
 int _printf_string(va_list args)
 {
     int i = 0;
@@ -21,9 +22,10 @@ int _printf_string(va_list args)
     }
     return(1);
 }
-int _printf_persentage()
+
+int _printf_persentage(va_list args)
 {
-    
+    (void)args;
     putchar('%');
     return(1);
 }

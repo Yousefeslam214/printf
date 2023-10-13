@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
+
 int _printf(const char *format, ...)
 {
     int i, j;
@@ -10,10 +11,12 @@ int _printf(const char *format, ...)
     fun_job_s_t ob[] = {
         {'c',_printf_char},
         {'s', _printf_string},
-        {'%', _printf_persentage}
+        {'%', _printf_persentage},
+        {'d', _printf_int},
+        {'i', _printf_int}
     };
     va_start(args, format);
-    for (i = 0;format[i];i++)
+    for (i = 0; format[i]; i++)
     {
         if (format[i] != '%')
             putchar(format[i]);
