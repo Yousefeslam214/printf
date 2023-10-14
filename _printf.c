@@ -6,9 +6,7 @@
 
 int _printf(const char *format, ...)
 {
-    int i, j;
-    int len = 0, valid = 0;
-    char sep = '%';
+    int i, j,len = 0;
 
     va_list args;
     fun_job_s_t ob[] = {
@@ -38,7 +36,6 @@ int _printf(const char *format, ...)
                 {
                     len += ob[j].f(args);
                     i++;
-                    valid = 1;
                 }
                 
             }
