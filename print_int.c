@@ -68,6 +68,6 @@ int _printf_int_main(va_list args)
 		len += _print_int_min();
 		return(len);
 	}*/
-	len += _pritnt_int(num);
+	len += _print_int(num);
 	return(len);
 }

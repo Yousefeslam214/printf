@@ -26,5 +26,9 @@ int main(void)
 	printf("Len:[%d]\n", len2);
     printf("len is : %d\n",_printf("Negative:[%d]\n", -762534));
     printf("len is : %d\n", printf("Negative:[%d]\n", -762534));
+	_printf("Negative:[%y]\n", -762534);
+    /*printf("Negative:[%y]\n", -762534);*/
+
 	return (0);
+
 }

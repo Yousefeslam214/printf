@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 {
     int i, j;
     int len = 0;
+    char sep = '%';
 
     va_list args;
     fun_job_s_t ob[] = {
@@ -18,6 +19,10 @@ int _printf(const char *format, ...)
         {'i', _printf_int_main}
     };
     va_start(args, format);
+    if ((!format))
+        return (-1);
+    if (format[0] == '%' && !format[1])
+        return (-1);
     for (i = 0; format[i]; i++)
     {
         if (format[i] != '%')
@@ -26,6 +31,7 @@ int _printf(const char *format, ...)
             len++;
         }
         else
+            
             for (j = 0; ob[j].s;j++)
             {
                 if ((ob[j].s) == format[i + 1])
@@ -33,8 +39,16 @@ int _printf(const char *format, ...)
                     len += ob[j].f(args);
                     i++;
                 }
+                if ((ob[j].s) != format[i + 1])
+                {
+                    putchar(sep);
+                    sep = '\0';
+                }
             }
+            
     }
+    if (format[len] == '%')
+        return (-1);
     va_end(args);
     
     return (len);
