@@ -42,11 +42,7 @@ int _printf(const char *format, ...)
                 }
                 
             }
-            if (valid == 0)
-            {
-                putchar(sep);
-                sep = '\0';
-            }
+            
             }
     }
     if (format[len] == '%')
