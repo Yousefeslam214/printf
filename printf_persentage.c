@@ -3,6 +3,6 @@
 int _printf_persentage(va_list args)
 {
     (void)args;
-    putchar('%');
+    _putchar('%');
     return(1);
 }

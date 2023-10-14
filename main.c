@@ -32,8 +32,8 @@ int main(void)
     printf("Length:[%d, %i]\n", len2, len2);
 
 	printf("Len:[%d]\n", len2);
-    printf("\nlen is : %d\n",_printf("This is a string with a hash (#) in it. "));
-    printf("\nlen is : %d\n", printf("This is a string with a hash (#) in it. "));
+    printf("\nlen is : %d\n",_printf("This is a string with a hash (#) in it."));
+    printf("\nlen is : %d\n", printf("This is a string with a hash (#) in it."));
 
 	return (0);
 

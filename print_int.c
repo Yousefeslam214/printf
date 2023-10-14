@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
@@ -39,12 +38,12 @@ int _print_int(int num)
 	while (rev)
 	{
 		temp = rev % 10;
-		putchar(temp + '0');
+		_putchar(temp + '0');
 		rev /= 10;
 		j++;
 	}
 	while (j++ < len)
-		putchar('0');
+		_putchar('0');
 	return(len);
 }
 
@@ -54,13 +53,13 @@ int _printf_int_main(va_list args)
 	num = va_arg(args, int);
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
 		len++;
 	}
 	else if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return (1);
 	}
 	/*if (num == INT_MIN)

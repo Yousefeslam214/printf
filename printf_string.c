@@ -7,7 +7,7 @@ int _printf_string(va_list args)
     str = va_arg(args, char *);
     while (str[i])
     {
-        putchar(str[i]);
+        _putchar(str[i]);
         i++;
     }
     return(1);
