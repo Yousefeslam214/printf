@@ -9,6 +9,11 @@ int _printf(const char *format, ...)
     int i, j,len = 0;
 
     va_list args;
+    if ((!format))
+        return (-1);
+    len = strlen(format);
+    if (len <= 0)
+        return (0);
     fun_job_s_t ob[] = {
         {'c',_printf_char},
         {'s', _printf_string},
@@ -17,8 +22,8 @@ int _printf(const char *format, ...)
         {'i', _printf_int_main}
     };
     va_start(args, format);
-    if ((!format))
-        return (-1);
+
+
     if (format[0] == '%' && !format[1])
         return (-1);
     for (i = 0; format[i]; i++)
@@ -44,6 +49,7 @@ int _printf(const char *format, ...)
     }
     if (format[len] == '%')
         return (-1);
+    putchar(-1);
     va_end(args);
     
     return (len);
