@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
     int i, j;
-    int len = 0;
+    int len = 0, valid = 0;
     char sep = '%';
 
     va_list args;
@@ -31,21 +31,23 @@ int _printf(const char *format, ...)
             len++;
         }
         else
-            
+            {
             for (j = 0; ob[j].s;j++)
             {
                 if ((ob[j].s) == format[i + 1])
                 {
                     len += ob[j].f(args);
                     i++;
+                    valid = 1;
                 }
-                if ((ob[j].s) != format[i + 1])
-                {
-                    putchar(sep);
-                    sep = '\0';
-                }
+                
             }
-            
+            if (valid == 0)
+            {
+                putchar(sep);
+                sep = '\0';
+            }
+            }
     }
     if (format[len] == '%')
         return (-1);
