@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
+#include <unistd.h>
+
+
 
 typedef struct fun_job
 {
@@ -21,6 +24,13 @@ int _printf(const char *format, ...);
 int _printf_char(va_list args);
 int _printf_string(va_list args);
 int _printf_persentage(va_list args);
-int _printf_int(va_list args);
+/*int _printf_int(va_list args);*/
+
+
+
+int _print_int_len(int num);
+int _print_int_reverse(int num);
+int _print_int(int num);
+int _printf_int_main(va_list args);
 
 #endif

@@ -3,45 +3,71 @@
 #include <stdarg.h>
 #include <string.h>
 #include "main.h"
-/*
+
+
+
+
 int _print_int_len(int num)
 {
-	int i;
+	int i , len = 0;
 	
 	for (i = 0; num; i++)
 	{
 		num /= 10;
+		len++;
 	}
-	return (i);
+	return (len);
 }
-*/
 
-int _printf_int(va_list args)
+int _print_int_reverse(int num)
 {
-	int num, digit, len = 0, numMod, i= 0;
+	int rev = 0, remaind = 0 ;
+	while (num)
+    {
+		remaind = num % 10;
+		rev = rev * 10 + remaind;
+		num /= 10;
+    }
+	return (rev);
+}
+
+int _print_int(int num)
+{
+	int len = 0, rev = 0, temp, j = 0;
+	len = _print_int_len(num);
+	rev = _print_int_reverse(num);
+	while (rev)
+	{
+		temp = rev % 10;
+		putchar(temp + '0');
+		rev /= 10;
+		j++;
+	}
+	while (j++ < len)
+		putchar('0');
+	return(len);
+}
+
+int _printf_int_main(va_list args)
+{
+	int num, len = 0;
 	num = va_arg(args, int);
-	numMod = num;
 	if (num < 0)
 	{
 		putchar('-');
 		num = -num;
-	}
-	else if (num == 0)
-		putchar('0');
-	while (numMod > 0)
-	{
-		
-		digit = numMod % 10;
-		numMod /= 10;
 		len++;
 	}
-	/*numModified*/
-	while (i < len)
+	else if (num == 0)
 	{
-		digit = num % 10;
-		putchar(digit);
-		num /= 10;
-		i++;
+		putchar('0');
+		return (1);
 	}
+	/*if (num == INT_MIN)
+	{
+		len += _print_int_min();
+		return(len);
+	}*/
+	len += _pritnt_int(num);
 	return(len);
 }
