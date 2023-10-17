@@ -33,8 +33,8 @@ int _printf_x_hex_str(va_list args)
 	int i = 0, len = 0;
 	int digit;
 	char *str;
-	str = va_arg(args, char *);
 
+	str = va_arg(args, char *);
 	if (str == NULL)
 	{
 		return (0);
@@ -61,6 +61,5 @@ int _printf_x_hex_str(va_list args)
 		}
 	i++;
 	}
-	
 	return (len);
 }
