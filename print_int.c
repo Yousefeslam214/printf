@@ -85,6 +85,7 @@ int _print_int_min(void)
 	return (11);
 }
 
+<<<<<<< HEAD
 /**
  * _print_int_max - if number  INT_MAX  print INT_MAX
  *
@@ -111,6 +112,8 @@ int _print_int_max(void)
  */
 
 
+=======
+>>>>>>> ea1c3208bd764a9d4fdeeb3187edf23031a63770
 int _printf_int_main(va_list args)
 {
 	int num, len = 0;
@@ -132,11 +135,14 @@ int _printf_int_main(va_list args)
 		len += _print_int_min();
 		return (len);
 	}
+<<<<<<< HEAD
 	else if (num == INT_MAX)
 	{
 		len += _print_int_max();
 		return (len);
 	}
+=======
+>>>>>>> ea1c3208bd764a9d4fdeeb3187edf23031a63770
 	len += _print_int(num);
 	return (len);
 }
