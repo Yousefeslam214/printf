@@ -5,12 +5,17 @@
 
 #include <limits.h>
 #include <stdio.h>
-
+/**
+ * _print_int_len - function calculate length
+ * @num: input number
+ *
+ * Return: len
+*/
 
 int _print_int_len(int num)
 {
-	int i , len = 0;
-	
+	int i, len = 0;
+
 	for (i = 0; num; i++)
 	{
 		num /= 10;
@@ -18,22 +23,37 @@ int _print_int_len(int num)
 	}
 	return (len);
 }
+/**
+ * _print_int_reverse - function that reverse number
+ * @num: input number
+ *
+ * Return: num
+*/
+
 
 int _print_int_reverse(int num)
 {
-	int rev = 0, remaind = 0 ;
+	int rev = 0, remaind = 0;
 	while (num)
-    {
-		remaind = num % 10;
-		rev = rev * 10 + remaind;
+{
+	remaind = num % 10;
+	rev = rev * 10 + remaind;
 		num /= 10;
-    }
+}
 	return (rev);
 }
+
+/**
+ *  _print_int - print digit
+ *  @num: input number
+ *
+ *  Return: len
+*/
 
 int _print_int(int num)
 {
 	int len = 0, rev = 0, temp, j = 0;
+
 	len = _print_int_len(num);
 	rev = _print_int_reverse(num);
 	while (rev)
@@ -44,9 +64,14 @@ int _print_int(int num)
 		j++;
 	}
 	while (j++ < len)
-		_putchar('0');
+		_putchar ('0');
 	return(len);
 }
+/**
+ * _print_int_min - if number  INT_MIN  print INT_MIN
+ *
+ * Return: 11
+*/
 
 int _print_int_min(void)
 {
@@ -57,8 +82,14 @@ int _print_int_min(void)
 		_putchar(*integer_min);
 		integer_min++;
 	}
-	return(11);
+	return (11);
 }
+
+/**
+ * _print_int_max - if number  INT_MAX  print INT_MAX
+ *
+ * Return: 11
+*/
 
 int _print_int_max(void)
 {
@@ -69,14 +100,21 @@ int _print_int_max(void)
 		_putchar(*integer_max);
 		integer_max++;
 	}
-	return(11);
+	return (11);
 }
 
+/**
+ * _printf_int_main - print int
+ *
+ * @arg: argument
+ * Return: len
+ */
 
 
 int _printf_int_main(va_list args)
 {
 	int num, len = 0;
+
 	num = va_arg(args, int);
 	if (num < 0)
 	{
@@ -92,13 +130,13 @@ int _printf_int_main(va_list args)
 	if (num == INT_MIN)
 	{
 		len += _print_int_min();
-		return(len);
+		return (len);
 	}
 	else if (num == INT_MAX)
 	{
 		len += _print_int_max();
-		return(len);
+		return (len);
 	}
 	len += _print_int(num);
-	return(len);
+	return (len);
 }
