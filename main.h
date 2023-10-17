@@ -35,4 +35,9 @@ int _print_int_reverse(int num);
 int _print_int(int num);
 int _printf_int_main(va_list args);
 
+
+void _convert_to_binary(unsigned int num, int *len_ptr);
+int _printf_convert_to_binary(va_list args);
+
+
 #endif
