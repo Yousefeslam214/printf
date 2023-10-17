@@ -7,6 +7,12 @@
 #include <unistd.h>
 #include <stdio.h>
 
+/**
+ * dec_to_hex - convert hexadecimal to decimal.
+ * @num: decimal integer.
+ * @len: length of output integer
+*/
+
 void _dec_to_hex(unsigned int num, int *len)
 {
 	unsigned int hex;
