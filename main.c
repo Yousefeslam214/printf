@@ -11,7 +11,6 @@ int main(void)
 	int len;
 	int len2;
 
-
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	_printf("Let's try to printf a simple sentence.\n");
@@ -35,6 +34,9 @@ int main(void)
     printf("\nlen is : %d\n",_printf("This is a string with a hash (#) in it."));
     printf("\nlen is : %d\n", printf("This is a string with a hash (#) in it."));
     _printf("%b\n", 98);
+	printf("%d\n", _printf("%S\n", "Best\nSchool"));
+	printf("%d\n",printf("fe%daafaf%dKB\n", 1024 , 1));
+	printf("%d\n", _printf("fe%daafaf%dKB\n", 1024 , 1));
 
 	return (0);
 
