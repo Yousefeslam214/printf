@@ -1,5 +1,8 @@
 #include "main.h"
-
+/**
+ * _strlen - function that return length
+ * Return: len
+ */
 
 int _strlen(const char *str)
 {
