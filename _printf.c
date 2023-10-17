@@ -3,6 +3,13 @@
 #include <stdarg.h>
 #include <string.h>
 
+/**
+ * _printf - it is a printf function
+ *
+ * @format: it is the string that will be printed
+ * Return: it is number of digit
+ */
+
 int _printf(const char *format, ...)
 {
 	int i, j, len = 0, newlen  = 0;
