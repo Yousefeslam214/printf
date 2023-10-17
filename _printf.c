@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 	int i, j, len = 0, newlen  = 0;
 
 	va_list args;
-	
+
 	fun_job_s_t ob[] = {{'c', _printf_char},
 		{'s', _printf_string}, {'%', _printf_persentage},
 		{'d', _printf_int_main}, {'i', _printf_int_main},
