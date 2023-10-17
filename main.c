@@ -23,20 +23,20 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-    printf("len is : %d\n",_printf("Negative:[%d] \n", -762534));
-    printf("len is : %d\n", printf("Negative:[%d] \n", -762534));
+printf("len is : %d\n", _printf("Negative:[%d] \n", -762534));
+printf("len is : %d\n", printf("Negative:[%d] \n", -762534));
 	_printf("Negative:%", -762534);
     /*printf("Negative:[%y]\n", -762534);*/
 	_printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
+printf("Length:[%d, %i]\n", len2, len2);
 
 	printf("Len:[%d]\n", len2);
-    printf("\nlen is : %d\n",_printf("This is a string with a hash (#) in it."));
-    printf("\nlen is : %d\n", printf("This is a string with a hash (#) in it."));
-    _printf("%b\n", 98);
+printf("\nlen is : %d\n", _printf("This is a string with a hash in it."));
+printf("\nlen is : %d\n", printf("This is a string with a hash (#) in it."));
+_printf("%b\n", 98);
 	printf("%d\n", _printf("%S\n", "Best\nSchool"));
-	printf("%d\n",printf("fe%daafaf%dKB\n", 1024 , 1));
-	printf("%d\n", _printf("fe%daafaf%dKB\n", 1024 , 1));
+	printf("%d\n", printf("fe%daafaf%dKB\n", 1024, 1));
+	printf("%d\n", _printf("fe%daafaf%dKB\n", 1024, 1));
 
 	return (0);
 
