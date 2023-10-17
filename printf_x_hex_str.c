@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 /**
- * dec_to_hex - convert hexadecimal to decimal.
+ * _dec_to_hex - convert hexadecimal to decimal.
  * @num: decimal integer.
  * @len: length of output integer
 */
@@ -31,6 +31,7 @@ void _dec_to_hex(unsigned int num, int *len)
 /**
  * _printf_x_hex_str - print converted hexadecimal to decimal.
  * @args: argument.
+ * Return: return len.
 */
 
 int _printf_x_hex_str(va_list args)
