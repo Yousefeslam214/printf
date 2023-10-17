@@ -60,20 +60,6 @@ int _print_int_min(void)
 	return(11);
 }
 
-int _print_int_max(void)
-{
-	char *integer_max = "2147483647";
-
-	while (*integer_max)
-	{
-		_putchar(*integer_max);
-		integer_max++;
-	}
-	return(11);
-}
-
-
-
 int _printf_int_main(va_list args)
 {
 	int num, len = 0;
@@ -92,11 +78,6 @@ int _printf_int_main(va_list args)
 	if (num == INT_MIN)
 	{
 		len += _print_int_min();
-		return(len);
-	}
-	else if (num == INT_MAX)
-	{
-		len += _print_int_max();
 		return(len);
 	}
 	len += _print_int(num);
