@@ -28,7 +28,6 @@ void _dec_to_hex(unsigned int num, int *len)
 	(void) (*len)++;
 }
 
-
 int _printf_x_hex_str(va_list args)
 {
 	int i = 0, len = 0;
