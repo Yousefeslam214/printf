@@ -34,6 +34,7 @@ int _print_int_len(int num)
 int _print_int_reverse(int num)
 {
 	int rev = 0, remaind = 0;
+
 	while (num)
 {
 	remaind = num % 10;
@@ -65,7 +66,7 @@ int _print_int(int num)
 	}
 	while (j++ < len)
 		_putchar ('0');
-	return(len);
+	return (len);
 }
 /**
  * _print_int_min - if number  INT_MIN  print INT_MIN
@@ -89,7 +90,7 @@ int _print_int_min(void)
 /**
  * _printf_int_main - print int
  *
- * @arg: argument
+ * @args: argument
  * Return: len
  */
 
