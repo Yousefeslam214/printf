@@ -5,7 +5,6 @@
 
 /**
  * _printf - it is a printf function
- *
  * @format: it is the string that will be printed
  * Return: it is number of digit
  */
@@ -31,7 +30,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] != '%)
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			len++;
