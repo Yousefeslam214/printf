@@ -1,12 +1,5 @@
 #include "main.h"
 
-
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
-
 /**
  * _dec_to_hex - convert hexadecimal to decimal.
  * @num: decimal integer.

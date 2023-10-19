@@ -1,11 +1,8 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
+
 
 /**
  * _printf - it is a printf function
- *
  * @format: it is the string that will be printed
  * Return: it is number of digit
  */
@@ -22,16 +19,14 @@ int _printf(const char *format, ...)
 		{'b', _printf_convert_to_binary}, {'S', _printf_x_hex_str}
 	};
 	va_start(args, format);
-	if ((!format))
+	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
 	newlen = _strlen(format);
 	if (newlen <= 0)
 		return (0);
-	if (format[0] == '%' && !format[1])
-		return (-1);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] != '%)
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			len++;
