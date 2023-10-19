@@ -8,12 +8,6 @@
 #include <limits.h>
 #include <stdio.h>
 
-typedef struct fun_job
-{
-	char s;
-	int (*f)(va_list);
-	
-}fun_job_s_t;
 
 /*tools
 int _putchar(char c);
@@ -45,6 +39,17 @@ int _printf_convert_to_binary(va_list args);
 void _dec_to_hex(unsigned int num, int *len);
 int _printf_x_hex_str(va_list args);
 
+/**
+ * struct fun_job - typedef struct
+ * @s: char
+ * @f: function
+ **/
+typedef struct fun_job
+{
+	char s;
+	int (*f)(va_list);
+	
+}fun_job_s_t;
 
 
 #endif

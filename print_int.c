@@ -1,10 +1,6 @@
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
 #include "main.h"
 
-#include <limits.h>
-#include <stdio.h>
+
 /**
  * _print_int_len - function calculate length
  * @num: input number

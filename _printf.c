@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
+
 
 /**
  * _printf - it is a printf function
