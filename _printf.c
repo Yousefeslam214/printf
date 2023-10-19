@@ -19,13 +19,11 @@ int _printf(const char *format, ...)
 		{'b', _printf_convert_to_binary}, {'S', _printf_x_hex_str}
 	};
 	va_start(args, format);
-	if ((!format))
+	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
 	newlen = _strlen(format);
 	if (newlen <= 0)
 		return (0);
-	if (format[0] == '%' && !format[1])
-		return (-1);
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] != '%')
@@ -46,5 +44,9 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
+	if (format[i] == '%' || !format)
+		{
+			return (-1);
+		}
 	return (len);
 }
