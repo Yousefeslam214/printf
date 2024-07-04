@@ -7,7 +7,7 @@
   <pre><code>#include "main.h"
 int main(void)
 {
-\_printf("Hello, World!\n");
+_printf("Hello, World!\n");
 return (0);
 }</code></pre>
   <h2>Functions we implemented</h2>
