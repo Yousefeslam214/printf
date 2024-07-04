@@ -4,18 +4,14 @@
   <p><code>printf</code> is a function in C that prints formatted output to the screen. It can print characters, strings, numbers, and more.</p>
   <h2>How to use our printf</h2>
   <p>To use our custom <code>printf</code> function, include the <code>main.h</code> header file and call <code>_printf</code> like this:</p>
-  <pre>
-  <code>
+  <pre><code>
 #include "main.h"
 
 int main(void)
 {
 \_printf("Hello, World!\n");
 return (0);
-}
-</code>
-
-  </pre>
+}</code></pre>
 
   <h2>Functions we implemented</h2>
   <p>We implemented several features of the <code>printf</code> function, including:</p>
@@ -27,9 +23,7 @@ return (0);
   </ul>
   <h2>How to compile and run</h2>
   <p>To compile the code, use <code>gcc</code> with the following command:</p>
-  <pre>
-    <code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf</code>
-  </pre>
+  <pre><code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf</code></pre>
   <p>To run the code, use:</p>
   <pre><code>./printf</code></pre>
   <h2>Example</h2>
@@ -57,6 +51,7 @@ len2 = printf("Percent:[%%]\n");
 printf("Len:[%d]\n", len2);
 return (0);
 }</code></pre>
+
   <p>The output will be:</p>
   <pre><code>
 Let's try to printf a simple sentence.
@@ -72,9 +67,6 @@ String:[I am a string !]
 Percent:[%]
 Percent:[%]
 Len:[12]
-Len:[12]
-  </code></pre>
-  <h2>Author</h2>
-  <p>This project was created by Yousef.</p>
+Len:[12]</code></pre>
   <h2>License</h2>
   <p>This project is for educational purposes only.</p>
