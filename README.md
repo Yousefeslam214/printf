@@ -49,10 +49,8 @@ len2 = printf("Percent:[%%]\n");
 printf("Len:[%d]\n", len2);
 return (0);
 }</code></pre>
-
   <p>The output will be:</p>
-  <pre><code>
-Let's try to printf a simple sentence.
+  <pre><code>Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
 Length:[39, 39]
