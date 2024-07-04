@@ -5,13 +5,11 @@
   <h2>How to use our printf</h2>
   <p>To use our custom <code>printf</code> function, include the <code>main.h</code> header file and call <code>_printf</code> like this:</p>
   <pre><code>#include "main.h"
-
 int main(void)
 {
 \_printf("Hello, World!\n");
 return (0);
 }</code></pre>
-
   <h2>Functions we implemented</h2>
   <p>We implemented several features of the <code>printf</code> function, including:</p>
   <ul>
