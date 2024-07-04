@@ -4,8 +4,7 @@
   <p><code>printf</code> is a function in C that prints formatted output to the screen. It can print characters, strings, numbers, and more.</p>
   <h2>How to use our printf</h2>
   <p>To use our custom <code>printf</code> function, include the <code>main.h</code> header file and call <code>_printf</code> like this:</p>
-  <pre><code>
-#include "main.h"
+  <pre><code>#include "main.h"
 
 int main(void)
 {
@@ -28,8 +27,7 @@ return (0);
   <pre><code>./printf</code></pre>
   <h2>Example</h2>
   <p>Here is an example of how the output looks:</p>
-  <pre><code>
-#include "main.h"
+  <pre><code>#include "main.h"
 
 int main(void)
 {
